@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="{% static 'css/index.css' %}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Cursos</h1>
+      <table>
+        <thead>
+          <th>Curso</th>
+          <th>Horario</th>
+          <th>Instructor</th>
+          <th>Dias</th>
+          <th>Fecha de inicio</th>
+          <th>Fecha de finalizacion</th>
+          <th>Alumnos</th>
+          <th>Acciones</th>
+        </thead>
+        <tbody>
+          {% for curso in cursos %}
+          <tr>
+            <td>{{curso.nombre}}</td>
+            <td>{{curso.horario}}</td>
+            <td>{{curso.instructor}}</td>
+            <td>{{curso.diasDeLaSemana}}</td>
+            <td>{{curso.fechaDeInicio}}</td>
+            <td>{{curso.fechaDeFinalizacion}}</td>
+            <td>{{curso.alumnos.all|length}}</td>
+            <td>
+              <a href="/cursos/{{curso.id}}"><button>Ver mas</button></a>
+            </td>
+          </tr>
+
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

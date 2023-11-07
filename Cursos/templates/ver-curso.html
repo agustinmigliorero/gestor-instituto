@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="{% static 'css/ver-curso.css' %}"
+    />
+  </head>
+  <body>
+      <div class="container">
+        <h1>Curso: {{curso.nombre}}</h1>
+        <p>Horario: {{curso.horario}}</p>
+        <p>Instructor: {{curso.instructor}}</p>
+        <p>Dias: {{curso.diasDeLaSemana}}</p>
+        <p>Fecha de inicio: {{curso.fechaDeInicio}}</p>
+        <p>Fecha de finalizacion: {{curso.fechaDeFinalizacion}}</p>
+        Alumnos:
+        <ul> {% for alumno in curso.alumnos.all %}
+            <li>{{alumno}}</li>
+            {% endfor %}
+        </ul>
+
+    <script src="{% static 'js/ver-curso.js' %}"></script>
+  </body>
+</html>

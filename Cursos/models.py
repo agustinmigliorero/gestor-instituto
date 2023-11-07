@@ -10,7 +10,9 @@ class Curso(models.Model):
     instructor = models.ForeignKey(
         "Instructor", on_delete=models.CASCADE, blank=True, null=True
     )
-    alumnos = models.ManyToManyField("Alumno", blank=True, null=True)
+    alumnos = models.ManyToManyField(
+        "Alumno", blank=True, null=True, related_name="alumnos"
+    )
 
     def __str__(self):
         return self.nombre
