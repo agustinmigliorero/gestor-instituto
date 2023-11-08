@@ -1,0 +1,54 @@
+body {
+  background-image: url("https://png.pngtree.com/background/20211217/original/pngtree-stationary-school-education-background-picture-image_1594834.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px -150px;
+  background-attachment: fixed;
+  color: white;
+  /* font-size: 24px; */
+}
+
+.titulo {
+  text-align: center;
+}
+
+.container {
+  margin-top: 1rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5% 10%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contenido {
+  margin-top: 3%;
+}
+
+.container-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  flex: 40%;
+  margin-left: 5%;
+}
+
+/* button {
+  border: 1px solid purple;
+  border-radius: 5px;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+  background-color: #ffaaff;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+button:hover {
+  background-color: #ff33ff;
+  color: #fff;
+} */
